@@ -1,0 +1,41 @@
+{
+  "manifest_version": 2,
+
+  "name": "Tracked Tags Feed - Tumblr",
+  "description": "This extension shows a Google Image search result for the current page",
+  "version": "0.1",
+  "background": {
+    "persistent": false,
+    "scripts": [
+      "./src/scripts/bg.js"
+    ]
+  },
+
+  "browser_action": {
+    "default_icon": "./src/resources/img/icon.png",
+    "default_popup": "./src/templates/popup.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": [
+        "http://www.google.com/*"
+      ],
+      "css": [
+        "./src/styles/style.css"
+      ],
+      "js": [
+        "./src/scripts/jquery-1.11.3.min.js",
+        "./src/scripts/bg.js"
+      ]
+    }
+  ],
+
+  "permissions": [
+    "tabs",
+    "activeTab",
+    "https://ajax.googleapis.com/",
+    "http2://api.tumblr.com",
+    "http://api.tumblr.com"
+  ]
+}

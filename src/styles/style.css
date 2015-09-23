@@ -1,0 +1,22 @@
+body {
+    font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+    font-size: 100%;
+    background-color: #36465d;
+    width: 600px;
+    height: 800px;
+    font-family: 'Helvetica Neue', 'HelveticaNeue', 'Helvetica', Arial, sans-serif;
+    color: rgba(255, 255, 255, 0.498039);
+}
+
+#status {
+    /* avoid an excessively wide status text */
+    white-space: pre;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    /*max-width: 400px;*/
+}
+
+#container{
+    width: 70%;
+    margin: 0 auto;
+}

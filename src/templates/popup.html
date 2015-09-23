@@ -1,0 +1,64 @@
+<!doctype html>
+<!--
+ This page is shown when the extension button is clicked, because the
+ "browser_action" field in manifest.json contains the "default_popup" key with
+ value "popup.html".
+ -->
+<html>
+
+<head>
+  <title>Getting Started Extension's Popup</title>
+  <link rel='stylesheet ' href='../styles/style.css'>
+  <style>
+    #titleBlog {
+      display: none;
+      position: fixed;
+      background-color: white;
+      border: #999999 thin solid;
+      border-radius: 5px;
+      padding: 5px;
+    }
+
+    #titreBlog h3 {
+      text-align: center;
+    }
+  </style>
+
+  <!--
+      - JavaScript and HTML must be in separate files: see our Content Security
+      - Policy documentation[1] for details and explanation.
+      -
+      - [1]: https://developer.chrome.com/extensions/contentSecurityPolicy
+     -->
+  <script src="../scripts/jquery-1.11.3.min.js"></script>
+  <script src="../scripts/bg.js"></script>
+</head>
+
+<body>
+  <div id='container'>
+    <!--
+    <button id='botao'>Let's try this shit</button>
+    <p id="asdf">asdf</p>
+    <div id="status"></div>
+    <img id="image-result" hidden>
+    </div>
+-->
+    <div id="menu">
+      <ul>
+        <li name='asdf'>
+          Menu1
+          <!--          <a  href="...">
+            </a>
+    -->
+        </li>
+        <li>Menu2</li>
+        <li id="blog">Blog
+          <div id="titleBlog">
+            <h3>Latests posts</h3>
+          </div>
+        </li>
+      </ul>
+    </div>
+</body>
+
+</html>
