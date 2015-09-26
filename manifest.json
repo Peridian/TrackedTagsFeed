@@ -25,7 +25,7 @@
         "./src/styles/style.css"
       ],
       "js": [
-        "./src/scripts/jquery-1.11.3.min.js",
+        "./src/scripts/jquery.js",
         "./src/scripts/bg.js"
       ]
     }

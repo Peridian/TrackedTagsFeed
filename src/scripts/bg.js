@@ -1,4 +1,18 @@
-var tumblr = require('../../node_modules/tumblr/lib/index.js');
+'use strict'
+var jsdom = require("jsdom").jsdom;
+var fs = require("fs");
+//var $ = fs.readFileSync("./jquery.js", "utf-8");
+//var $ = require("jquery")(jsdom.jsdom().createWindow());
+
+var tumblr = require('tumblr');
+
+/*jsdom.env({
+    html : "<html><body></body></html>",
+    done : function(errs, window) {
+        global.window = window;
+    }
+});
+*/
 /*
 var client = tumblr.createClient({
   consumer_key: '<consumer key>',
@@ -7,6 +21,8 @@ var client = tumblr.createClient({
   token_secret: '<oauth token secret>'
 });
 */
+//var document = document ||
+
 window.addEventListener("load", init);
 
 function init() {

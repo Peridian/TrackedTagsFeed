@@ -5,6 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "jQuery": "^1.7.4",
+    "jsdom": "^6.5.1",
     "requirejs": "^2.1.20",
     "sass": "^0.5.0",
     "tumblr": "^0.4.1"
