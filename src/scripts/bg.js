@@ -1,31 +1,17 @@
+var tumblr = require('../../node_modules/tumblr/lib/index.js');
+/*
+var client = tumblr.createClient({
+  consumer_key: '<consumer key>',
+  consumer_secret: '<consumer secret>',
+  token: '<oauth token>',
+  token_secret: '<oauth token secret>'
+});
+*/
 window.addEventListener("load", init);
 
 function init() {
-	
-	(function ajax() {
-		console.log('ajax');
-		$('document').ready(function () {
-			$.ajax({
-				url: "http://api.tumblr.com/v2/blog/myblog.tumblr.com/info?api-key=myapikey",
-				dataType: 'jsonp',
-				success: function (results) {
-					console.log(results);
-				}
-			});
-		});
-	})()
 
-	function ProcessTitle(reponse) {
-		console.log('response');
-		console.log(response);
-		var posts = reponse.response.posts;
-		var text = '';
-		for (var i in posts) {
-			p = posts[i];
-			text += '<a href=' + p.post_url + '>' + p.title + '</a><br>';
-		}
-		$('#titleBlog').append(text);
-	}
+	//client.posts(blogName, options, callback);
 
 	$("li").on("mouseover", function () {
 		console.log('MouseOver', $(this).text());
@@ -39,4 +25,29 @@ function init() {
 		console.log('MouseOut', $(this).text());
 		$("#titleBlog").hide();
 	});
+}
+
+function ajax() {
+	$.ajax({
+		url: "http://api.tumblr.com/v2/blog/cinemagorgeous.com/info?api_key=lGuohaIkGsYCy69StuPmI5CDQ7UiIDoVg1tHoirxbNziYp7vj0",
+		dataType: 'jsonp',
+		success: function (results) {
+			// Logs to your javascript console.
+			console.log(results);
+			// writes the title to a div with the Id "myDivId" (ie. <div id="myDivId"></div>)
+			$("#myDivId").html(results.response.title);
+		}
+	});
+ }
+
+function ProcessTitle(reponse) {
+	console.log('response');
+	console.log(response);
+	var posts = reponse.response.posts;
+	var text = '';
+	for (var i in posts) {
+		p = posts[i];
+		text += '<a href=' + p.post_url + '>' + p.title + '</a><br>';
+	}
+	$('#titleBlog').append(text);
 }

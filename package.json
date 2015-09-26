@@ -1,0 +1,19 @@
+{
+  "name": "TrackedTagsFeed",
+  "version": "0.0.0",
+  "description": "Chrome Extension that creates a Tumblr feed that brings the posts from the tags you follow",
+  "main": "index.js",
+  "dependencies": {
+    "jQuery": "^1.7.4",
+    "requirejs": "^2.1.20",
+    "sass": "^0.5.0",
+    "tumblr": "^0.4.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/scripts/bg.js"
+  },
+  "author": "Arthur 'Tuca' Lopes",
+  "license": "ISC"
+}
