@@ -8,7 +8,7 @@ function init() {
 
 	var
 		fs = require("fs")
-		, tumblr = require('tumblr').Client
+		, tumblr = require('tumblr')
 		, oauth = require('oauth')
 		, consumer
 		;
@@ -16,24 +16,34 @@ function init() {
 	window.tumblr = tumblr;
 
 	console.log('tumblr', tumblr);
+	console.log('oauth', oauth);
 
-/*
-	var client = tumblr.createClient({
-		consumer_key: 'lGuohaIkGsYCy69StuPmI5CDQ7UiIDoVg1tHoirxbNziYp7vj0',
-		consumer_secret: 'VViK77e3pJjqmAYSglCUFiQdiCkfumDS3UyOlPJoRmPbkqgu1g',
-		token: 'Y559tLKowmgG2i7PEbfKd6yYCkE0tQMaqtx40SRlvpiU8uoVt0',
-		token_secret: '6ztFGYCCXnSSsbjdYYntJBed48ryLUigu4LV10odr0mCWTviA2'
-	});
+		var client = tumblr.Tagged({
+			consumer_key: 'lGuohaIkGsYCy69StuPmI5CDQ7UiIDoVg1tHoirxbNziYp7vj0',
+			consumer_secret: 'VViK77e3pJjqmAYSglCUFiQdiCkfumDS3UyOlPJoRmPbkqgu1g',
+			token: 'Y559tLKowmgG2i7PEbfKd6yYCkE0tQMaqtx40SRlvpiU8uoVt0',
+			token_secret: '6ztFGYCCXnSSsbjdYYntJBed48ryLUigu4LV10odr0mCWTviA2'
+		});
+/*	
+		// Make the request
+		client.userInfo(function (err, data) {
+			// ...
+		});
+	*/
 
-	// Make the request
-	client.userInfo(function (err, data) {
+	/*
+	var client = new tumblr.Client({
 		// ...
 	});
-*/
-var client = new tumblr.Client({
-    // ...
-});
+	*/
 
+	$.getJSON('http://api.tumblr.com/v2/blog/YOURBLOG.tumblr.com/posts/photo?callback=?', {
+		api_key: consumerKey,
+		tag: 'meme',
+		limit: 12
+	}).then(function (json) {
+		console.log(json);
+	});
 
 	/*
 	 consumer = new oauth.OAuth(
