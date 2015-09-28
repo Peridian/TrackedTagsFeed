@@ -8,6 +8,9 @@
     "persistent": false,
     "scripts": [
       "./src/scripts/bg.js"
+/*
+      "./src/scripts/jquery.js"
+*/
     ]
   },
 
@@ -25,9 +28,11 @@
         "./src/styles/style.css"
       ],
       "js": [
-        "./src/scripts/jquery.js",
+/*
+      "./src/scripts/jquery.js",
         "./src/scripts/bg.js"
-      ]
+  */
+  ]
     }
   ],
 
