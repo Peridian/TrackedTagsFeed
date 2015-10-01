@@ -14,13 +14,18 @@
   },
   "devDependencies": {
     "del": "^2.0.2",
+    "exorcist": "^0.4.0",
+    "express-tumblr-oauth": "0.0.7",
     "gulp": "^3.9.0",
-    "gulp-browserify": "^0.5.1"
+    "gulp-browserify": "^0.5.1",
+    "path": "^0.12.7"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node ./src/scripts/bg.js",
-    "asdf": "browserify index.js -o bundle.js -d"
+    "a": "browserify index.js -o bundle.js -d",
+    "aa": "browserify index.js --debug | exorcist bundle.js.map > bundle.js ",
+    "list": "npm list -depth=0"
   },
   "author": "Arthur 'Tuca' Lopes",
   "license": "ISC"
