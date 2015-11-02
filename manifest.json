@@ -2,7 +2,7 @@
   "manifest_version": 2,
 
   "name": "Tracked Tags Feed - Tumblr",
-  "description": "This extension shows a Google Image search result for the current page",
+  "description": "Creates a feed filled with posts from the tags you follow",
   "version": "0.1",
   "background": {
     "persistent": false,
@@ -37,10 +37,16 @@
   ],
 
   "permissions": [
-    "tabs",
-    "activeTab",
-    "https://ajax.googleapis.com/",
-    "http2://api.tumblr.com",
-    "http://api.tumblr.com"
+      "tabs"
+    , "activeTab"
+    , "https://ajax.googleapis.com/"
+    , "api.tumblr.com"
+    , "api.tumblr.com/v2/*"
+//    , "chrome-extension://*"
+  //  , "*://*/*"
+    //, "*://*/"
+    , "unlimitedStorage"
+    , "storage"
+    , "management"
   ]
 }
