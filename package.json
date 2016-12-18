@@ -1,33 +1,36 @@
 {
-  "name"        : "TrackedTagsFeed",
-  "version"     : "0.0.0",
-  "description" : "Chrome Extension that creates a Tumblr feed that brings the posts from the tags you follow",
-  "main"        : "index.js",
+  "name": "TrackedTagsFeed",
+  "version": "0.0.0",
+  "description": "Chrome Extension that creates a Tumblr feed that brings the posts from the tags you follow",
+  "main": "index.js",
   "dependencies": {
-    "jQuery"        : "^1.7.4"
-    , "jsdom"       : "^6.5.1"
-    , "oauth"       : "^0.9.14"
-    , "requirejs"   : "^2.1.20"
-    , "sass"        : "^0.5.0"
-    , "tumblr"      : "^0.4.1"
-    , "tumblr.js"   : "0.0.5"
+    "jQuery": "^1.7.4",
+    "jsdom": "^6.5.1",
+    "oauth": "^0.9.14",
+    "requirejs": "^2.1.20",
+    "sass": "^0.5.0",
+    "tumblr": "^0.4.1",
+    "tumblr.js": "0.0.5"
   },
   "devDependencies": {
-    "del"                   : "^2.0.2"
-    , "exorcist"            : "^0.4.0"
-    , "express-tumblr-oauth": "0.0.7"
-    , "gulp"                : "^3.9.0"
-    ,"gulp-browserify"      : "^0.5.1"
-    ,"path"                 : "^0.12.7"
+    "browserify": "^13.0.0",
+    "del": "^2.0.2",
+    "exorcist": "^0.4.0",
+    "express-tumblr-oauth": "0.0.7",
+    "gulp": "^3.9.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-sourcemaps": "^1.6.0",
+    "path": "^0.12.7",
+    "vinyl-source-stream": "^1.1.0"
   },
   "scripts": {
-    "test"    : "echo \"Error: no test specified\" && exit 1"
-    , "start" : "node ./src/scripts/bg.js"
-    , "a"     : "browserify index.js -o bundle.js -d"
-    , "aa"    : "browserify index.js --debug | exorcist bundle.js.map > bundle.js "
-    , "list"  : "npm list -depth=0"
-    , "lista" : "npm list -depth=0 -g"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./src/scripts/bg.js",
+    "a": "browserify index.js -o bundle.js -d",
+    "aa": "browserify index.js --debug | exorcist bundle.js.map > bundle.js ",
+    "list": "npm list -depth=0",
+    "lista": "npm list -depth=0 -g"
   },
-  "author"    : "Arthur 'Tuca' Lopes"
-  , "license" : "ISC"
+  "author": "Arthur 'Tuca' Lopes",
+  "license": "ISC"
 }
